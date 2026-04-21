@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品详情 | 品牌案例</title>
+    <style>
+        :root {
+            --primary: #ff3d00;
+            --secondary: #212121;
+            --light: #f5f5f5;
+            --gray: #888888;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', 'Noto Sans SC', sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--secondary);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* 导航栏 */
+        nav {
+            padding: 2rem 0;
+            background-color: white;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .back-btn {
+            display: inline-block;
+            color: var(--secondary);
+            font-weight: 500;
+            padding: 0.5rem 1.5rem;
+            border: 1px solid var(--secondary);
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+
+        .back-btn:hover {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        /* 作品详情 */
+        .work-detail {
+            padding: 5rem 0;
+        }
+
+        .work-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .work-category {
+            font-size: 1rem;
+            text-transform: uppercase;
+            color: var(--primary);
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .work-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+        }
+
+        .work-brief {
+            font-size: 1.1rem;
+            color: var(--gray);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* 作品图片展示 */
+        .work-images {
+            margin: 4rem 0;
+        }
+
+        .work-img-main {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+
+        .work-img-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .work-img-grid img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        /* 设计思路 */
+        .work-analysis {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 2;
+            font-size: 1.1rem;
+        }
+
+        .work-analysis h3 {
+            font-size: 1.8rem;
+            margin: 3rem 0 1.5rem;
+            color: var(--primary);
+        }
+
+        .work-analysis p {
+            margin-bottom: 1.5rem;
+            color: var(--secondary);
+        }
+
+        /* 底部导航 */
+        .work-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 5rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+        }
+
+        .prev-work, .next-work {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--secondary);
+            font-weight: 500;
+        }
+
+        .prev-work:hover, .next-work:hover {
+            color: var(--primary);
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: var(--secondary);
+            color: var(--gray);
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 5rem;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <div class="container nav-container">
+            <div class="logo"><img src="https://i.ibb.co/ZpLJ3PGq/HUJIONG-01.png" style="width: 180px; height: auto; vertical-align: middle;"></div>
+            <a href="index.html" class="back-btn">← 返回首页</a>
+        </div>
+    </nav>
+
+    <!-- 作品详情 -->
+    <section class="work-detail">
+        <div class="container">
+            <div class="work-header">
+                <div class="work-category">品牌设计 | VI全案</div>
+                <h1 class="work-title">教育品牌VI全案设计</h1>
+                <p class="work-brief">为宣怀教育打造全新品牌视觉体系，涵盖LOGO、标准色、字体、应用物料等，塑造一个 “植根中国，拥有全球视野，且以科技驱动教育科学” 的现代高端品牌形象。</p>
+            </div>
+
+            <!-- 主视觉图 -->
+            <div class="work-images">
+                <img src="https://i.ibb.co/tpbXFTrG/20220409-12.png" alt="教育品牌VI主视觉" class="work-img-main">
+                <!-- 细节图网格 -->
+                <div class="work-img-grid">
+                    <img src="https://i.ibb.co/7tnZ4yQ5/VI-v6-05.jpg" alt="LOGO设计稿">
+					<img src="https://i.ibb.co/W40SnQth/VI-v6-27.jpg" alt="LOGO设计稿">
+                    <img src="https://i.ibb.co/jv6RSnpy/24.jpg" alt="名片应用效果">
+					<img src="https://i.ibb.co/jvz2ycXw/3.jpg" alt="办公物料应用">
+                    <img src="https://i.ibb.co/qLYfRxnW/10.jpg" alt="办公物料应用">
+					<img src="https://i.ibb.co/Rp3Njk2H/8.jpg" alt="办公物料应用">
+                </div>
+            </div>
+
+            <!-- 设计思路 -->
+            <div class="work-analysis">
+                <h3>项目背景</h3>
+                <p>教育行业视觉设计需兼顾专业权威性与文化亲和力，传统教育机构常见的视觉体系存在同质化严重、应用不规范等问题。宣怀教育立足高端教育定位，需突破常规视觉套路，通过 VIS 设计建立独特的品牌视觉符号，既契合教育行业 “育人、责任、成长” 的核心属性，又彰显国际化、现代化的品牌气质，满足品牌在招生宣传、校区运营、国际交流等多场景的视觉应用需求。</p>
+
+                <h3>设计思路</h3>
+                <p>1. 盾形符号：借鉴国际名校视觉设计惯例，盾形象征教育的责任与守护，传递机构对学生成长的专业护航、对教育品质的坚守承诺，同时赋予品牌权威感与庄重感，契合高端教育的定位。</p>
+                <p>2. 字母 H 融合：将品牌核心标识 “H” 与盾形结构深度融合，既直观体现品牌缩写，强化视觉记忆点，又通过几何化重构让符号更具现代感与设计感，适配线上线下多媒介传播场景。</p>
+                <p>3. 色彩语义构建：科技蓝 + 未来红为主色调，科技蓝象征教育的严谨、理性与国际化视野，契合高端教育的专业质感；未来红传递人文温度与活力，平衡教育行业的严肃感，同时红、蓝配色也与品牌 “宣怀” 的文化内涵形成呼应，彰显底蕴与活力兼具的品牌性格。。</p>
+
+                <h3>项目成果</h3>
+                <p>完成 VIS 全案设计，形成包含基础系统、应用系统的完整品牌视觉手册，明确每一项视觉元素的应用规范，为宣怀教育后续品牌物料制作、校区运营提供统一的视觉执行标准。</p>
+				<p>明确各级业务品牌使用规范，底解决此前视觉混乱的问题，呈现清晰的视觉效果，获得品牌方、合作机构及目标受众的一致认可。</p>
+			</div>
+
+            <!-- 作品导航 -->
+            <div class="work-nav">
+                <a href="work3.html" class="prev-work">
+                    <span>← 上一个</span>
+                    <div>文创海报设计</div>
+                </a>
+                <a href="work2.html" class="next-work">
+                    <div>食品包装升级设计</div>
+                    <span>下一个 →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 HUJIONG | 平面设计师个人作品集 | 用设计创造价值</p>
+        </div>
+    </footer>
+</body>
+</html>
