@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品详情 | 品牌案例</title>
+    <style>
+        :root {
+            --primary: #ff3d00;
+            --secondary: #212121;
+            --light: #f5f5f5;
+            --gray: #888888;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', 'Noto Sans SC', sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--secondary);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* 导航栏 */
+        nav {
+            padding: 2rem 0;
+            background-color: white;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .back-btn {
+            display: inline-block;
+            color: var(--secondary);
+            font-weight: 500;
+            padding: 0.5rem 1.5rem;
+            border: 1px solid var(--secondary);
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+
+        .back-btn:hover {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        /* 作品详情 */
+        .work-detail {
+            padding: 5rem 0;
+        }
+
+        .work-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .work-category {
+            font-size: 1rem;
+            text-transform: uppercase;
+            color: var(--primary);
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .work-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+        }
+
+        .work-brief {
+            font-size: 1.1rem;
+            color: var(--gray);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* 作品图片展示 */
+        .work-images {
+            margin: 4rem 0;
+        }
+
+        .work-img-main {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+
+        .work-img-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .work-img-grid img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        /* 设计思路 */
+        .work-analysis {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 2;
+            font-size: 1.1rem;
+        }
+
+        .work-analysis h3 {
+            font-size: 1.8rem;
+            margin: 3rem 0 1.5rem;
+            color: var(--primary);
+        }
+
+        .work-analysis p {
+            margin-bottom: 1.5rem;
+            color: var(--secondary);
+        }
+
+        /* 底部导航 */
+        .work-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 5rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+        }
+
+        .prev-work, .next-work {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--secondary);
+            font-weight: 500;
+        }
+
+        .prev-work:hover, .next-work:hover {
+            color: var(--primary);
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: var(--secondary);
+            color: var(--gray);
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 5rem;
+        }
+		/* ========== 返回顶部按钮 ========== */
+		.back-top {
+		    position: fixed;
+		    bottom: 30px;
+		    right: 30px;
+		    width: 48px;
+		    height: 48px;
+		    border-radius: 50%;
+		    background-color: var(--primary);
+		    color: #fff;
+		    display: flex;
+		    align-items: center;
+		    justify-content: center;
+		    cursor: pointer;
+		    box-shadow: 0 4px 14px rgba(255, 61, 0, 0.35);
+		    opacity: 0;
+		    visibility: hidden;
+		    transition: all 0.3s ease;
+		    z-index: 999;
+		    font-size: 18px;
+		}
+		.back-top.show {
+		    opacity: 1;
+		    visibility: visible;
+		}
+		.back-top:hover {
+		    transform: translateY(-4px);
+		}
+
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <div class="container nav-container">
+            <div class="logo"><img src="https://i.ibb.co/ZpLJ3PGq/HUJIONG-01.png" style="width: 180px; height: auto; vertical-align: middle;"></div>
+            <a href="index.html" class="back-btn">← 返回首页</a>
+        </div>
+    </nav>
+
+    <!-- 作品详情 -->
+    <section class="work-detail">
+        <div class="container">
+            <div class="work-header">
+                <div class="work-category">品牌设计 | VI全案</div>
+                <h1 class="work-title">梧桐医院VI全案设计</h1>
+                <p class="work-brief">为武汉梧桐妇产医院打造全新品牌视觉体系，涵盖 LOGO 标志、标准色值、专属字体规范、全场景应用物料等全套视觉内容，塑造一个植根本土医疗、守护母婴全周期健康，以专业医疗为本、人文关怀赋能服务的现代高端妇产医疗品牌形象。</p>
+            </div>
+
+            <!-- 主视觉图 -->
+            <div class="work-images">
+                <img src="https://i.ibb.co/pvFxKjJP/01.jpg" alt="科技品牌VI主视觉" class="work-img-main">
+                <!-- 细节图网格 -->
+                <div class="work-img-grid">
+                    <img src="https://i.ibb.co/S776tQg9/logo-07.jpg" alt="LOGO设计稿">
+					<img src="https://i.ibb.co/JwPgJTyh/logo-01.jpg" alt="LOGO设计稿">
+					<img src="https://i.ibb.co/WWvRsnkg/sc1.jpg" alt="LOGO设计稿">
+					<img src="https://i.ibb.co/8njVzVtQ/sc2.jpg" alt="LOGO设计稿">
+                </div>
+            </div>
+
+            <!-- 设计思路 -->
+            <div class="work-analysis">
+                <h3>项目背景</h3>
+                <p>医疗行业竞争加剧，患者对就医体验与品牌信任度的要求持续提升，妇产医院作为聚焦母婴健康的特殊医疗机构，亟需构建统一且极具辨识度的视觉形象，打破传统医疗场景冰冷、同质化的刻板印象，强化品牌核心竞争力。</p>
+
+                <h3>设计思路</h3>
+                <p>1. 以抽象化梧桐树冠为主体轮廓，树冠线条圆润柔和，传递包容、守护的意象；树冠下方融入 “母亲托举新生儿” 的极简剪影造型，直观呼应妇产医院核心服务场景，图形整体简洁凝练，兼具辨识度与记忆点，符合医疗品牌视觉符号 “易识别、易传播” 的要求。</p>
+                <p>2. 主色调选用柔和玫粉色，契合女性与母婴群体的情感偏好，传递温暖、治愈的氛围，同时规避浅粉的稚嫩感，强化品牌专业质感；辅助色搭配米白、深灰，米白用于提亮视觉、营造舒适氛围，深灰用于强化文字辨识度、凸显医疗严谨性，形成 “主色调定氛围、辅助色补功能” 的色彩搭配逻辑，适配不同场景视觉需求。</p>
+                <p>3. 品牌名称字体选用圆润规整的无衬线字体，笔画流畅无尖锐棱角，既贴合母婴服务的亲和属性，又保证远距离识别性；英文及辅助文字字体选用简洁现代的无衬线字体，与中文字体形成协调统一的视觉节奏，确保全场景字体应用规范、统一。</p>
+
+                <h3>项目成果</h3>
+                <p>通过统一的视觉体系，彻底打破医院此前视觉混乱的局面，构建起 “温馨专业、值得信赖” 的全新品牌形象。玫粉色主色调搭配梧桐 + 母婴剪影的核心标志，形成强记忆点的视觉符号，让用户直观感知品牌定位，有效区分于传统冰冷的医疗机构，显著提升品牌辨识度与差异化竞争力。</p>
+				
+			</div>
+
+            <!-- 作品导航 -->
+            <div class="work-nav">
+                <a href="work3.html" class="prev-work">
+                    <span>← 上一个</span>
+                    <div>文创海报设计</div>
+                </a>
+                <a href="work2.html" class="next-work">
+                    <div>食品包装升级设计</div>
+                    <span>下一个 →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 HUJIONG | 平面设计师个人作品集 | 用设计创造价值</p>
+        </div>
+    </footer>
+	<!-- 返回顶部按钮 HTML -->
+	<div class="back-top">↑</div>
+<!-- 返回顶部 JS脚本 -->
+<script>
+    const backTopBtn = document.querySelector('.back-top');
+    window.addEventListener('scroll', function(){
+        //滚动超过300px显示按钮
+        if(window.scrollY > 300){
+            backTopBtn.classList.add('show');
+        }else{
+            backTopBtn.classList.remove('show');
+        }
+    });
+    backTopBtn.addEventListener('click',function(){
+        window.scrollTo({
+            top:0,
+            behavior:'smooth'
+        })
+    })
+</script>
+
+</body>
+</html>
